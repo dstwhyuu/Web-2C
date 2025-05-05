@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website 2C</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    #mobile-menu, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+        .open .top-line {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .open .mid-line {
+      opacity: 0;
+    }
+
+    .open .bottom-line {
+      transform: rotate(-45deg) translate(4px, -4px);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="absolute top-0 left-0 w-full z-50 bg-transparent p-0 m-0">
+    <div class="flex items-center justify-end p-4">
+      <!-- Hamburger -->
+      <button id="hamburger-btn" class="relative w-8 h-6 flex flex-col justify-between z-50 group">
+        <span class="line top-line block h-1 w-6 bg-white rounded transition-all duration-300 origin-left"></span>
+        <span class="line mid-line block h-1 w-5 bg-white rounded transition-all duration-300 origin-left"></span>
+        <span class="line bottom-line block h-1 w-4 bg-white rounded transition-all duration-300 origin-left"></span>
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-green-900/90 backdrop-blur-lg text-white shadow-2xl transform -translate-x-full transition-transform duration-300 z-40">
+      <div class="px-6 pt-6 pb-3 bg-gradient-to-r from-green-900 to-green-600 text-white rounded-b-xl shadow-md flex flex-col items-center text-center">
+        <p class="text-lg font-bold">Website 2C</p>
+        <p class="text-sm">Manajemen Informatika</p>
+      </div>
+      
+      <ul class="p-6 space-y-4 divide-y divide-green-700">
+        <li class="flex items-center gap-3 pt-2">
+          <i data-feather="image" class="w-5 h-5 text-white"></i>
+          <a href="#galery" class="hover:text-yellow-400 font-medium drop-shadow">Galery</a>
+        </li>
+        <li class="flex items-center gap-3 pt-2">
+          <i data-feather="info" class="w-5 h-5 text-white"></i>
+          <a href="#tentang" class="hover:text-yellow-400 font-medium drop-shadow">Tentang</a>
+        </li>
+        <li class="flex items-center gap-3 pt-2">
+          <i data-feather="phone" class="w-5 h-5 text-white"></i>
+          <a href="#kontak" class="hover:text-yellow-400 font-medium drop-shadow">Kontak</a>
+        </li>
+        <li class="flex items-center gap-3 pt-2">
+          <i data-feather="book-open" class="w-5 h-5 text-white"></i>
+          <a href="#blog" class="hover:text-yellow-400 font-medium drop-shadow">Blog</a>
+        </li>
+        <li class="flex items-center gap-3 pt-2">
+          <i data-feather="star" class="w-5 h-5 text-white"></i>
+          <a href="#keunggulan" class="hover:text-yellow-400 font-medium drop-shadow">Keunggulan</a>
+        </li>
+      </ul>
+      <div class="mt-6 px-6">
+        <a href="#kontak" class="block text-center bg-yellow-400 text-green-900 py-2 rounded-full font-semibold hover:bg-yellow-300 transition duration-300">
+          Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative w-full overflow-hidden m-0 p-0">
+    <img src="pict class.jpg" alt="Ilustrasi Desa"
+         class="absolute top-0 left-0 w-full h-full object-cover opacity-80 z-0" />
+    <div class="relative z-10 flex flex-col items-center justify-center text-center text-green-900 min-h-screen px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Kelas damai</h1>
+      <p class="text-lg md:text-xl mb-6">Dari 2C untuk Masyarakat</p>
+      <div class="flex gap-4">
+        <a href="#tentang" class="bg-white text-green-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">Pelajari Lebih Lanjut</a>
+        <a href="#kontak" class="bg-yellow-400 text-green-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-yellow-300 transition">Hubungi Kami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami Ringkas -->
+  <section id="tentang" class="py-16 px-6 text-center">
+    <img src="pict student.webp" alt="Ilustrasi Petani" class="mx-auto h-48 mb-6">
+    <h2 class="text-2xl font-bold text-green-900 mb-4">Tentang Kami</h2>
+    <p class="max-w-xl mx-auto text-gray-700 mb-6">Kami adalah Mahasiswa Politeknik Negeri Bali Semester 2.</p>
+    <a href="tentang.html" class="text-green-700 underline font-semibold">Lihat Selengkapnya</a>
+  </section>
+
+  <!-- Keunggulan Produk -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-bold text-green-900">Kenapa Suka Kami?</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-green-700 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 12l10 10 10-10L12 2z"></path>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2">Ramah</h3>
+        <p class="text-gray-600">Tidak suka toxic.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <i data-feather="clock" class="w-10 h-10 text-green-700 mx-auto mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Ontime</h3>
+        <p class="text-gray-600">Selalu tepat waktu ketika memasuki kelas, bahkan ketika kelas pagi.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <i data-feather="dollar-sign" class="w-10 h-10 text-green-700 mx-auto mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Hemat</h3>
+        <p class="text-gray-600">Hemat pengeluaran.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-green-900 text-white text-center py-16 px-6">
+    <h2 class="text-3xl font-bold mb-4">Komang Desta Wahyu Kurniawan</h2>
+    <p class="mb-6">2415323011</p>
+    <a href="kontak.html" class="bg-white text-green-900 px-6 py-3 rounded-lg shadow font-semibold hover:bg-gray-200 transition">Hubungi Kami</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Website 2C. Dibuat dengan ❤️ untuk masa depan .</p>
+  </footer>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>
